@@ -20,9 +20,9 @@ target_compile_options(LessonOne PRIVATE
     # MSVC
     $<$<CXX_COMPILER_ID:MSVC>:/W3>)
 
-# target_link_libraries(LessonOne PRIVATE 
-#     VOS::AppKit
-# )
+target_link_libraries(LessonOne PRIVATE 
+    -pthread
+)
 
 target_compile_options(LessonOne PRIVATE ${TRAINING_WARNINGS})
 
