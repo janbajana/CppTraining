@@ -5,7 +5,12 @@ project(CppTraining LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
-option(WARNINGS_AS_ERRORS          "If enabled, warnings are treated as errors." ON)
+option(CPPTRAINING_WARNINGS_AS_ERRORS          "If enabled, warnings are treated as errors." ON)
+option(CPPTRAINING_ENABLE_TEST     "If enabled, unit tests are built." ON)
+
+if(CPPTRAINING_ENABLE_TEST)
+    enable_testing()
+endif()
 
 if(MSVC)
     # enable parallel builds
@@ -21,7 +26,7 @@ if (NOT DEFINED TRAINING_WARNINGS)
     endif()
 endif()
 
-if (WARNINGS_AS_ERRORS)
+if (CPPTRAINING_WARNINGS_AS_ERRORS)
     if (MSVC)
         set(TRAINING_WARNINGS "/WX$<SEMICOLON>${TRAINING_WARNINGS}")
     else()
@@ -50,3 +55,7 @@ set(CPP_TRAINGING_INSTALL_LIB_DIR ${CMAKE_BINARY_DIR}/lib)
 
 # add_subdirectory(modules)
 add_subdirectory(apps)
+
+if(CPPTRAINING_ENABLE_TEST)
+    add_subdirectory(test)
+endif()
