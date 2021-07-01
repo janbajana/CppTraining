@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(CppTraining LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 option(CPPTRAINING_WARNINGS_AS_ERRORS          "If enabled, warnings are treated as errors." ON)
 option(CPPTRAINING_ENABLE_TEST     "If enabled, unit tests are built." ON)

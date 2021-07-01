@@ -45,6 +45,7 @@ endif()
 find_package(GTest REQUIRED)
 find_package(benchmark REQUIRED)
 
-add_benchmark_test(STL_Algorithms "${CMAKE_CURRENT_LIST_DIR}/Pluralsight/STL_Algorithms.cpp")
+add_benchmark_test(stl_algorithms "${CMAKE_CURRENT_LIST_DIR}/Pluralsight/stl_algorithms.cpp")
 
-add_gtest(LessonOneTest "${CMAKE_CURRENT_LIST_DIR}/LessonOneTest.cpp")
+add_gtest(going_native "${CMAKE_CURRENT_LIST_DIR}/YouTube/going_native.cpp")
+add_gtest(back_to_the_basics "${CMAKE_CURRENT_LIST_DIR}/YouTube/back_to_the_basics.cpp")
