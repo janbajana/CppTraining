@@ -2,8 +2,6 @@
 
 https://app.pluralsight.com/
 
-___
-
 ## 1.1 STL Algorithms
 
 Beautiful C++: STL Algorithms
@@ -20,8 +18,6 @@ To extend this see also:
 
 - GoingNative 2013 C++ Seasoning
 
-___
-
 ## 1.2 Updating Legacy Code
 
  Beautiful C++: Updating Legacy Code
@@ -33,13 +29,9 @@ ___
 
 # 2 YouTube
 
-___
-
 ## 2.1 GoingNative 2013 C++ Seasoning
 
 - link: https://www.youtube.com/watch?v=W2tWOdzgXHA
-
-___
 
 ## 2.1 CppCon 2015: Richard Powell “The Importance of Being const"
 
