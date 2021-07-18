@@ -141,7 +141,7 @@ public:
     // Optimise for rvalues.
     // There is one downside for this.
     // This should not throw exception because we are not doing ny heat allocation.
-    // This is also good option as optimisation. 
+    // This is also good option as optimisation.
     // Do not use const std::string&& name, it may create a copy!!!
     // First 2 are general default advice.
     void setName(std::string&& name) noexcept
@@ -184,6 +184,39 @@ TEST(back_to_the_basics, moving_semantic)
 
     e.setName(std::move(name3));
     printf(" - name: %s \n", name3.c_str());
+}
+
+// Operator overloading
+
+struct Sum
+{
+    int mSum;
+    Sum() : mSum(0) {}
+    void operator()(int n)
+    {
+        mSum += n;
+        printf("Sum: %d \n", mSum);
+    }
+
+    int get(){ return mSum; }
+};
+
+TEST(back_to_the_basics, operator_overloading)
+{
+    Sum sum;
+    sum(2);
+    sum(4);
+    printf(" - sum: %d \n", sum.get());
+
+    std::vector<int> v = { 1, 2, 3, 4, 5, 6 };
+    Sum s = std::for_each(v.begin(), v.end(), Sum());
+    printf(" - sum: %d \n", s.get());
+
+    // printf(" - name: %s \n", name1.c_str());
+
+    // printf(" - name: %s \n", name2.c_str());
+
+    // printf(" - name: %s \n", name3.c_str());
 }
 
 // = use tuple for mutiple return values;

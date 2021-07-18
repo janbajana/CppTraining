@@ -45,6 +45,11 @@
   - Algoritms: find, sort, etc. They work on any container.
   - Iterators: they are almost like pointers but provide significant functionality. Algoritms usually work with iterators.
 
+ Related :
+ CppCon 2018: 105 STL Algorithms in Less Than an Hour
+ by Jonathan Boccara
+  - https://youtu.be/2olsGf6JIkU
+ 
  Usefull headers you may need if you work with algoritms.
   - <algorithm>
   - <vector> <array> <list> <stack> <map> <queue>
