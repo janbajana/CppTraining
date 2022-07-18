@@ -140,7 +140,7 @@ public:
 
     // Optimise for rvalues.
     // There is one downside for this.
-    // This should not throw exception because we are not doing ny heat allocation.
+    // This should not throw exception because we are not doing any heap allocation.
     // This is also good option as optimisation.
     // Do not use const std::string&& name, it may create a copy!!!
     // First 2 are general default advice.
