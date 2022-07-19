@@ -1,4 +1,5 @@
 *.[oa]
+*.out
 Build/Linux*
 Build/MacOS*
 Build/Windows*
