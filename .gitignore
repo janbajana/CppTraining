@@ -1,5 +1,6 @@
 *.[oa]
 *.out
+*.so
 Build/Linux*
 Build/MacOS*
 Build/Windows*
