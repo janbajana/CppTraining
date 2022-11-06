@@ -61,7 +61,7 @@ create main object file and generate output:
 - `gcc -c examples_chapter3_2.c -o main_d.o`
 - `gcc main_d.o -L./ -lMinMax_d -lm -o ex3_d.out`
 
-check what you link and execute
+check what you link and execute on MAC
 
 - `otool -L ./ex3_d.out`
 - `LD_LIBRARY_PATH=./ ./ex3_d.out`
